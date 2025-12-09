@@ -1,0 +1,49 @@
+channels:
+  # tg channels
+  - name: telegram
+    type: telegram
+    token: your_token
+  # bark channels
+  #- name: Bark
+  #  type: bark
+  #  token: "https://api.day.app/your_token233/"
+  # Dingtalk
+  - name: dingtalk
+    type: dingtalk
+    token: https://oapi.dingtalk.com/robot/send?access_token=your_token
+  # wecom
+  - name: wecom
+    type: wecom
+    token: your_token
+  # igot
+  - name: igot
+    type: igot
+    token: your_token
+  # pushplus
+  - name: pushplus
+    type: pushplus
+    token: your_token
+  # feishu
+  - name: feishu
+    type: feishu
+    token: https://open.feishu.cn/open-apis/bot/v2/hook/your_token
+
+
+channel_groups: # groups of channels
+  - name: group1
+    use:
+      - telegram
+  - name: group2
+    use:
+      - dingtalk
+      - wecom
+      - telegram
+      - igot
+      - pushplus
+      - feishu
+
+default_channel: group2 # can be channel or channel_group name here
+
+auth:
+    user: admin
+    pass: yourpassword
