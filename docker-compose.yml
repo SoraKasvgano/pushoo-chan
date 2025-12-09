@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pushoochan
+    volumes:
+      - /home/docker/pushoochan:/app/user_config
+    expose:
+      - '8084'
+    ports:
+      - '8084:8084'
+    restart: unless-stopped
