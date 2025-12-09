@@ -2,6 +2,20 @@
 
 兼容Server酱接口的多通道推送平台
 
+## quickstart
+
+### Docker
+```
+mkdir pushoochan
+cd pushoochan
+mv config_example.yml config.yml
+nano config.yml
+docker compose up -d
+```
+
+visit ip:8084
+
+
 ## 功能 Features
 
 - **支持多种通道**：基于 [pushoo](https://pushoo.js.org/) ，支持企业微信/PushDeer/Bark/Telegram/飞书/钉钉等（具体列表详见pushoo文档）
